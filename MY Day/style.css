@@ -1,0 +1,725 @@
+/* ===============================
+   RESET
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f8f6;
+    color: #1f2933;
+    line-height: 1.6;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+
+/* ===============================
+   NAVBAR
+================================ */
+
+.navbar {
+    width: 100%;
+    padding: 18px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: white;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    transition: background 0.3s ease;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #4f7d5c;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+}
+
+nav a:hover {
+    color: #4f7d5c;
+}
+
+
+/* ===============================
+   DARK MODE BUTTON
+================================ */
+
+#themeButton {
+    width: 42px;
+    height: 42px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #eef3ee;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+
+    transition: 0.3s ease;
+}
+
+#themeButton:hover {
+    transform: scale(1.08);
+}
+
+
+/* ===============================
+   HERO
+================================ */
+
+.hero {
+    min-height: 75vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 80px 8%;
+
+    background: linear-gradient(
+        120deg,
+        #edf5ee,
+        #f8faf7
+    );
+
+    transition: background 0.3s ease;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.small-title {
+    color: #4f7d5c;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 7vw, 75px);
+    line-height: 1.05;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #4f7d5c;
+}
+
+.hero p:not(.small-title) {
+    max-width: 550px;
+    color: #667085;
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+
+
+/* ===============================
+   BUTTONS
+================================ */
+
+.hero-button,
+.add-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 48px;
+
+    padding: 12px 22px;
+
+    background: #4f7d5c;
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.hero-button:hover,
+.add-button:hover {
+    background: #3d6348;
+    transform: translateY(-2px);
+}
+
+
+/* ===============================
+   ACTIVITIES
+================================ */
+
+.activities-section {
+    padding: 90px 8%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.section-heading {
+    margin-bottom: 40px;
+}
+
+.section-heading h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.section-heading > p:last-child {
+    color: #667085;
+}
+
+
+/* ===============================
+   FORM
+================================ */
+
+.activity-form {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr auto;
+
+    gap: 15px;
+
+    align-items: end;
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+
+    margin-bottom: 40px;
+
+    transition: background 0.3s ease;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.input-group input {
+    width: 100%;
+
+    min-height: 48px;
+
+    padding: 12px 14px;
+
+    border: 1px solid #d7ddd8;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    background: white;
+    color: #222;
+}
+
+.input-group input:focus {
+    border-color: #4f7d5c;
+}
+
+
+/* ===============================
+   ACTIVITY LIST
+================================ */
+
+.activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.activity-card {
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+
+    border: 1px solid #edf0ed;
+
+    transition: background 0.3s ease;
+}
+
+.activity-time {
+    font-weight: bold;
+    color: #4f7d5c;
+    min-width: 80px;
+}
+
+.activity-info {
+    flex: 1;
+}
+
+.activity-info h3 {
+    font-size: 17px;
+    margin-bottom: 3px;
+}
+
+.activity-info p {
+    color: #7b8490;
+    font-size: 14px;
+}
+
+
+/* ===============================
+   COMPLETE BUTTON
+================================ */
+
+.complete-button {
+    width: 44px;
+    height: 44px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    border: 1px solid #4f7d5c;
+
+    background: white;
+
+    color: #4f7d5c;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+
+    transition: 0.25s ease;
+}
+
+.complete-button:hover {
+    background: #4f7d5c;
+    color: white;
+    transform: scale(1.05);
+}
+
+
+/* Completed */
+
+.activity-card.completed {
+    opacity: 0.6;
+}
+
+.activity-card.completed h3 {
+    text-decoration: line-through;
+}
+
+
+/* ===============================
+   PROGRESS
+================================ */
+
+.progress-container {
+    margin-top: 40px;
+}
+
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+
+    font-weight: bold;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+
+    background: #e3e8e4;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    width: 0%;
+
+    background: #4f7d5c;
+
+    transition: width 0.4s ease;
+}
+
+
+/* ===============================
+   ABOUT
+================================ */
+
+.about {
+    padding: 90px 8%;
+
+    background: #1f2d24;
+
+    color: white;
+}
+
+.about div {
+    max-width: 700px;
+    margin: auto;
+}
+
+.about h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.about p:last-child {
+    color: #c5cec8;
+}
+
+
+/* ===============================
+   FOOTER
+================================ */
+
+footer {
+    padding: 25px;
+
+    text-align: center;
+
+    background: #172019;
+
+    color: #aeb8b1;
+
+    font-size: 14px;
+}
+
+
+/* =================================================
+   DARK MODE
+================================================= */
+
+body.dark {
+    background: #101512;
+    color: #f1f5f2;
+}
+
+
+/* Navbar */
+
+body.dark .navbar {
+    background: #18201b;
+    border-bottom: 1px solid #29332c;
+}
+
+body.dark nav a {
+    color: #e6ebe7;
+}
+
+body.dark nav a:hover {
+    color: #78a984;
+}
+
+
+/* Theme button */
+
+body.dark #themeButton {
+    background: #29332c;
+    color: white;
+}
+
+
+/* Hero */
+
+body.dark .hero {
+    background: linear-gradient(
+        120deg,
+        #121b15,
+        #1b261f
+    );
+}
+
+
+/* Hero paragraph */
+
+body.dark .hero p:not(.small-title) {
+    color: #aeb8b1;
+}
+
+
+/* Section text */
+
+body.dark .section-heading > p:last-child {
+    color: #aeb8b1;
+}
+
+
+/* Form */
+
+body.dark .activity-form {
+    background: #1b241e;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Inputs */
+
+body.dark .input-group input {
+    background: #111813;
+
+    color: white;
+
+    border-color: #354138;
+}
+
+body.dark .input-group input::placeholder {
+    color: #7e8b82;
+}
+
+
+/* Activity cards */
+
+body.dark .activity-card {
+    background: #1b241e;
+
+    border-color: #2b362e;
+}
+
+body.dark .activity-info p {
+    color: #9ba79e;
+}
+
+
+/* Complete button */
+
+body.dark .complete-button {
+    background: #1b241e;
+    color: #79a985;
+}
+
+body.dark .complete-button:hover {
+    background: #4f7d5c;
+    color: white;
+}
+
+
+/* Progress */
+
+body.dark .progress-bar {
+    background: #2b352e;
+}
+
+
+/* About */
+
+body.dark .about {
+    background: #0b100d;
+}
+
+
+/* Footer */
+
+body.dark footer {
+    background: #070a08;
+}
+
+
+/* =================================================
+   TABLET
+================================================= */
+
+@media (max-width: 900px) {
+
+    .activity-form {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .add-button {
+        width: 100%;
+        grid-column: 1 / -1;
+    }
+}
+
+
+/* =================================================
+   MOBILE
+================================================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 16px 5%;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    nav a {
+        display: none;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        min-height: 70vh;
+
+        padding: 60px 5%;
+    }
+
+    .hero h1 {
+        font-size: 44px;
+    }
+
+    .hero p:not(.small-title) {
+        font-size: 16px;
+    }
+
+    .hero-button {
+        width: 100%;
+    }
+
+
+    /* Activities */
+
+    .activities-section {
+        padding: 65px 5%;
+    }
+
+    .section-heading h2 {
+        font-size: 32px;
+    }
+
+
+    /* Form */
+
+    .activity-form {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        padding: 20px;
+    }
+
+    .input-group {
+        width: 100%;
+    }
+
+    .add-button {
+        width: 100%;
+        min-height: 50px;
+    }
+
+
+    /* Activity card */
+
+    .activity-card {
+        display: grid;
+
+        grid-template-columns: 1fr auto;
+
+        gap: 8px 15px;
+
+        padding: 18px;
+    }
+
+    .activity-time {
+        grid-column: 1 / -1;
+
+        min-width: auto;
+
+        font-size: 13px;
+    }
+
+    .activity-info {
+        min-width: 0;
+    }
+
+    .activity-info h3 {
+        font-size: 16px;
+
+        overflow-wrap: anywhere;
+    }
+
+    .activity-info p {
+        font-size: 13px;
+    }
+
+    .complete-button {
+        width: 44px;
+        height: 44px;
+    }
+
+
+    /* About */
+
+    .about {
+        padding: 65px 5%;
+    }
+
+    .about h2 {
+        font-size: 32px;
+    }
+
+}

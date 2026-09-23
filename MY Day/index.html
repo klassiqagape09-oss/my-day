@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Makes the website responsive on phones -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MyDay - Daily Activity Tracker</title>
+
+    <!-- Connect our CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="navbar">
+
+        <div class="logo">
+            My<span>Day</span>
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#activities">Activities</a>
+            <a href="#about">About</a>
+
+            <!-- JavaScript will control this button -->
+            <button id="themeButton">🌙</button>
+        </nav>
+
+    </header>
+
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="small-title">YOUR DAILY COMPANION</p>
+
+            <h1>
+                Plan Your Day.<br>
+                <span>Track Your Progress.</span>
+            </h1>
+
+            <p>
+                Record your activities, stay organized,
+                and keep track of everything you accomplish
+                throughout your day.
+            </p>
+
+            <a href="#activities" class="hero-button">
+                Record an Activity
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ACTIVITY SECTION ================= -->
+    <section class="activities-section" id="activities">
+
+        <div class="section-heading">
+
+            <p class="small-title">TODAY</p>
+
+            <h2>My Activities</h2>
+
+            <p>
+                What are you planning to accomplish today?
+            </p>
+
+        </div>
+
+
+        <!-- Activity form -->
+        <form id="activityForm" class="activity-form">
+
+            <div class="input-group">
+
+                <label for="activity">
+                    Activity
+                </label>
+
+                <input
+                    type="text"
+                    id="activity"
+                    placeholder="e.g. Learn JavaScript"
+                    required
+                >
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label for="time">
+                    Time
+                </label>
+
+                <input
+                    type="time"
+                    id="time"
+                    required
+                >
+
+            </div>
+
+
+            <button type="submit" class="add-button">
+                + Add Activity
+            </button>
+
+        </form>
+
+
+        <!-- Activities will appear here -->
+        <div id="activityList" class="activity-list">
+
+            <!-- Example activity -->
+            <div class="activity-card">
+
+                <div class="activity-time">
+                    08:00 AM
+                </div>
+
+                <div class="activity-info">
+                    <h3>Morning Exercise</h3>
+                    <p>Start the day with some exercise.</p>
+                </div>
+
+                <button class="complete-button">
+                    ✓
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Progress -->
+        <div class="progress-container">
+
+            <div class="progress-header">
+                <span>Daily Progress</span>
+                <span id="progressText">0%</span>
+            </div>
+
+            <div class="progress-bar">
+
+                <div
+                    id="progress"
+                    class="progress"
+                ></div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+    <section class="about" id="about">
+
+        <div>
+
+            <p class="small-title">ABOUT MYDAY</p>
+
+            <h2>Make Every Day Count.</h2>
+
+            <p>
+                MyDay is a simple activity tracker designed
+                to help you organize your daily tasks and
+                keep track of your progress.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+
+        <p>
+            © 2026 MyDay. Built with HTML, CSS & JavaScript.
+        </p>
+
+    </footer>
+
+
+    <!-- Connect JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
